@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Games Counter</title>
+
+    <link rel="stylesheet" href="https://maimaidx-eng.com/maimai-mobile/css/common.css?ver=1.10?20201023" />
+	<link rel="apple-touch-icon-precomposed" href="https://maimaidx-eng.com/maimai-mobile/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="https://maimaidx-eng.com/maimai-mobile/apple-touch-icon.png">
+	<link rel="stylesheet" href="webfontkit-20210514-234127/stylesheet.css">
+
+    <script>
+		var baseW = 768;
+		var iOSW = 0;
+		var ua = navigator.userAgent.toLowerCase();
+		var isiOS = (ua.indexOf("iphone") > -1) || (ua.indexOf("ipod") > -1) || (ua.indexOf("ipad") > -1);
+		if(isiOS){
+			iOSW = document.documentElement.clientWidth;
+		}
+		window.addEventListener("resize", updateMetaViewport, false);
+		window.addEventListener("orientationchange", updateMetaViewport, false);
+		var ev = document.createEvent("UIEvent");
+		ev.initEvent("resize", true, true)
+		window.dispatchEvent(ev);
+		function updateMetaViewport(){
+			var viewportContent;
+			var w = window.outerWidth;
+			if(isiOS){
+				w = iOSW;
+			}
+			if(w < baseW){
+				viewportContent = "width=480,initial-scale=" + w/480 + ",user-scalable=yes,shrink-to-fit=no";
+			}else{
+				viewportContent = "width=device-width,initial-scale=1.0,user-scalable=yes,shrink-to-fit=no";
+			}
+			document.querySelector("meta[name='viewport']").setAttribute("content", viewportContent);
+		}
+	</script>
+
+</head>
+
+<body style="padding:20px">
+
+
+    
+	
+	<div class="header">
+		<h1 style="margin:0px" onClick="showPP()">GAMES COUNTER</h1>
+		<button class="new_player" onclick="showCounters()">
+			<img style="width:50px; position:right;" src="https://maimaidx-eng.com/maimai-mobile/img/btn_setting.png">
+		</button>
+		
+	</div>
+<div id='bruh'>
+	<div id="cards">
+		<!--
+		<div class="basic_block" id="basic_block">
+			<div class="pPic" style="position:right">
+				<img class="wheel" src='https://maimaidx-eng.com/maimai-mobile/img/Icon/' style='position:center; width:128px; height:128px;' />
+			</div>
+
+			<div class="info">
+				<div class="displayName">
+					<div class="name_block t_l f_l f_14 underline">
+						<p class= "newpara">NAME</p>
+					</div>
+				</div>
+
+				<div class="controls">
+					<button id="increment" onclick="increment()"><img style="width:75px" src="increment.png"></button>
+					<button id="decrement" onclick="decrement()"><img style="width:75px" src="decrement.png"></button>
+				</div>
+			</div>
+
+			<div class="count">
+				<h1 id="currCount" class="count" style="font-family:'tondubeta'; font-size: 40px;">0</h1>
+			</div>
+
+		</div>-->
+	</div>
+</div>
+
+
+    <script src="index.js"></script>
+    <footer class="f_0">
+        <div class="footer_marquee">
+        <div class="footer w_480">
+</body>
+</html>
+
