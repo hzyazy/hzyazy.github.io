@@ -165,4 +165,8 @@ function updateCountDOWN(clicked_id,currentCount){
     }
   })
 }*/
+
+function clear(){
+  localStorage.clear()
+}
 newCard();
