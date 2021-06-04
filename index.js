@@ -166,7 +166,10 @@ function updateCountDOWN(clicked_id,currentCount){
   })
 }*/
 
-function clear(){
-  localStorage.clear()
+function clearlocal(){
+  localStorage.clear();
+  location.replace('https://hzyazy.github.io');
+  return;
 }
+
 newCard();
