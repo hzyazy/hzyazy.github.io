@@ -2,6 +2,16 @@ body{
     max-width: 480px;
 }
 
+.title{
+    
+    color: #FFE839;
+    text-shadow: 3px 3px  #FBB03B;
+    margin-top: auto;
+    margin-bottom: auto;
+    word-wrap: break-word;
+}
+
+
 .wrapper_main_wrapper{
     display:grid;
     row-gap: 1em;
@@ -10,7 +20,7 @@ body{
 
 .header{
     display:grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 #bruh{
